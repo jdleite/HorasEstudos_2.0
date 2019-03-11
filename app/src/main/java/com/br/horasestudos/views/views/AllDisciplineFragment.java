@@ -1,4 +1,4 @@
-package com.br.horasestudos.views;
+package com.br.horasestudos.views.views;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -8,9 +8,7 @@ import android.view.ViewGroup;
 
 import com.br.horasestudos.R;
 
-
-public class AllDatesFragment extends Fragment {
-
+public class AllDisciplineFragment extends Fragment {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -21,7 +19,8 @@ public class AllDatesFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_all_dates, container, false);
+        return inflater.inflate(R.layout.fragment_all_discipline, container, false);
     }
+
 
 }

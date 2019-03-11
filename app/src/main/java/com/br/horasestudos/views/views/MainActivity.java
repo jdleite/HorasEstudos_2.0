@@ -1,4 +1,4 @@
-package com.br.horasestudos.views;
+package com.br.horasestudos.views.views;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
