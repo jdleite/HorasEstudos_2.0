@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">HorasEstudos</string>
+    <string name="app_name">Horas de Estudos</string>
     <string name="navigation_drawer_open">Abrir Menu</string>
     <string name="navigation_drawer_close">Fechar Menu</string>
     <string name="nav_header_title">Android Studio</string>
@@ -8,8 +8,11 @@
     <string name="configuracoes">Configurações</string>
     <string name="datas">Datas</string>
     <string name="horas">Horas</string>
-    <string name="materias">Materias</string>
+    <string name="materias">Matérias</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="nome_da_mat_ria">Nome da matéria</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
 </resources>

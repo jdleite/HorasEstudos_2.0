@@ -5,7 +5,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class MainDb extends SQLiteOpenHelper {
 
-    private static String BANCO = "BANCO";
+    private static String BANCO = "DATABASE";
     public static String TABELA = "MATERIAS";
     private  static  int VERSAO = 1;
 
