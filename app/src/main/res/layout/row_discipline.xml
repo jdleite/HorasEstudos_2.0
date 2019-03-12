@@ -4,7 +4,7 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/text_name"
+        android:id="@+id/txt_name"
         android:text="name"
         android:layout_weight="7"
         android:layout_width="0dp"
@@ -14,7 +14,7 @@
         android:layout_height="wrap_content" />
 
     <ImageView
-        android:id="@+id/image_remove"
+        android:id="@+id/img_remove"
         android:layout_width="0dp"
         android:layout_height="65dp"
         android:layout_marginRight="20dp"

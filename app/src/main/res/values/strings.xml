@@ -15,4 +15,8 @@
     <string name="nome_da_mat_ria">Nome da matéria</string>
     <string name="cancel">Cancel</string>
     <string name="save">Save</string>
+    <string name="deseja_remover">Deseja Remover a Matéria</string>
+    <string name="remocao_materia">Remoção de Matéria</string>
+    <string name="sim">SIM</string>
+    <string name="nao">NÃO</string>
 </resources>
