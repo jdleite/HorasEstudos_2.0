@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    tools:context=".views.banco.FormDisciplineActivity">
+    tools:context=".views.views.FormDisciplineActivity">
 
     <EditText
         android:id="@+id/edtDiscipline"
@@ -14,11 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAlignment="center" />
-    <EditText
-        android:id="@+id/edtDate"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAlignment="center" />
+
 
     <Button
         android:id="@+id/btnSave"

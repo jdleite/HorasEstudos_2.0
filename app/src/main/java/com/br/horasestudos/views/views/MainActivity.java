@@ -2,6 +2,7 @@ package com.br.horasestudos.views.views;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.design.widget.NavigationView;
@@ -12,17 +13,23 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.br.horasestudos.R;
-import com.br.horasestudos.views.banco.FormDisciplineActivity;
 
-public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+
+
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener,View.OnClickListener {
+
+    private ViewHolder viewHolder = new ViewHolder();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        viewHolder.floatingActionButton = findViewById(R.id.add_discipline);
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -36,9 +43,9 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
+        listener();
         setDefaultFragment();
 
-        startActivity(new Intent(MainActivity.this, FormDisciplineActivity.class));
     }
 
     @Override
@@ -126,4 +133,24 @@ public class MainActivity extends AppCompatActivity
         getSupportFragmentManager().beginTransaction().replace(R.id.frame_content,fragment).commit();
 
     }
+
+    @Override
+    public void onClick(View v) {
+
+        if(v.getId() == R.id.add_discipline){
+            startActivity(new Intent(MainActivity.this,FormDisciplineActivity.class));
+        }
+
+    }
+
+    private static class ViewHolder{
+        FloatingActionButton floatingActionButton;
+
+    }
+
+    private void listener(){
+        viewHolder.floatingActionButton.setOnClickListener(this);
+    }
+
+
 }

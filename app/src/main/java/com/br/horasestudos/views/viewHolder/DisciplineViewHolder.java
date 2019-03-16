@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 import com.br.horasestudos.R;
 import com.br.horasestudos.views.listener.DisciplineListener;
-import com.br.horasestudos.views.repository.Discipline;
+import com.br.horasestudos.views.entity.Discipline;
 
 public class DisciplineViewHolder extends RecyclerView.ViewHolder {
 

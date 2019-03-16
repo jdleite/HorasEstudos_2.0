@@ -1,4 +1,4 @@
-package com.br.horasestudos.views.repository;
+package com.br.horasestudos.views.entity;
 
 public class Discipline {
     private int id;

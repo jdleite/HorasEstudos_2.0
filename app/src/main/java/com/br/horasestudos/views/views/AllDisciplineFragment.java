@@ -7,6 +7,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.br.horasestudos.R;
+import com.br.horasestudos.views.banco.CreateDatabase;
+import com.br.horasestudos.views.business.DisciplineBusiness;
 
 public class AllDisciplineFragment extends Fragment {
 
@@ -14,6 +16,7 @@ public class AllDisciplineFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        new CreateDatabase().create();
     }
 
     @Override

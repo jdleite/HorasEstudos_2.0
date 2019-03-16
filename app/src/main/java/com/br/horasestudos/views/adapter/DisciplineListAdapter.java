@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 
 import com.br.horasestudos.R;
 import com.br.horasestudos.views.listener.DisciplineListener;
-import com.br.horasestudos.views.repository.Discipline;
+import com.br.horasestudos.views.entity.Discipline;
 import com.br.horasestudos.views.viewHolder.DisciplineViewHolder;
 
 import java.util.List;
