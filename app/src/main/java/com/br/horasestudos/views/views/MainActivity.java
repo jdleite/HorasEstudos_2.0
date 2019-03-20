@@ -46,6 +46,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         listener();
         setDefaultFragment();
 
+
+
     }
 
     @Override

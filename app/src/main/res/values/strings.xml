@@ -19,4 +19,11 @@
     <string name="remocao_materia">Remoção de Matéria</string>
     <string name="sim">SIM</string>
     <string name="nao">NÃO</string>
+    <string name="campo_obrigatorio">Campo obrigatório</string>
+    <string name="salvar">Salvar</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="salvo_sucesso">Salvo com sucesso</string>
+    <string name="erro_salvar">Erro ao salvar</string>
+    <string name="alterado_sucesso">Alterado com sucesso</string>
+    <string name="erro_alterar">Erro ao alterar</string>
 </resources>
