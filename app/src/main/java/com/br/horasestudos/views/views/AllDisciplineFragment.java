@@ -21,6 +21,7 @@ import com.br.horasestudos.views.business.DisciplineBusiness;
 import com.br.horasestudos.views.constants.Constants;
 import com.br.horasestudos.views.entity.Discipline;
 import com.br.horasestudos.views.listener.DisciplineListener;
+import com.br.horasestudos.views.viewHolder.DisciplineViewHolder;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,10 +37,6 @@ public class AllDisciplineFragment extends Fragment {
         super.onCreate(savedInstanceState);
 
 
-
-
-
-
     }
 
     @Override
@@ -53,24 +50,34 @@ public class AllDisciplineFragment extends Fragment {
         viewHolder.imgRemove = view.findViewById(R.id.img_remove);
 
 
-
-
-
         business = new DisciplineBusiness();
 
-         listener = new DisciplineListener() {
+        listener = new DisciplineListener() {
             @Override
             public void onListClick(int id) {
 
                 Bundle b = new Bundle();
 
-                b.putInt(Constants.BundleConstants.BUNDLE_ID,id);
-                Intent intent = new Intent(MyApp.getContext(),FormDisciplineActivity.class);
+                b.putInt(Constants.BundleConstants.BUNDLE_ID, id);
 
-                intent.putExtras(b);
 
-                startActivity(intent);
+                if (DisciplineViewHolder.point == 1) {
 
+                    Intent intent = new Intent(MyApp.getContext(), AddHoursActivity.class);
+                    intent.putExtras(b);
+
+                    startActivity(intent);
+
+
+                } else {
+
+                    Intent intent = new Intent(MyApp.getContext(), FormDisciplineActivity.class);
+                    intent.putExtras(b);
+
+                    startActivity(intent);
+
+
+                }
 
 
             }
@@ -82,11 +89,12 @@ public class AllDisciplineFragment extends Fragment {
                 loadDiscipline();
 
             }
+
+            
         };
 
 
         loadDiscipline();
-
 
 
         teste();
@@ -94,20 +102,20 @@ public class AllDisciplineFragment extends Fragment {
         return view;
     }
 
-    private static class ViewHolder{
+    private static class ViewHolder {
         RecyclerView recyclerView;
         TextView txtName;
         ImageView imgRemove;
     }
 
-    public void loadDiscipline(){
+    public void loadDiscipline() {
         List<Discipline> listDiscipline = new ArrayList<>();
         DisciplineBusiness business = new DisciplineBusiness();
 
         listDiscipline.addAll(business.listDiscipline());
 
 
-        DisciplineListAdapter adapter = new DisciplineListAdapter(listDiscipline,listener);
+        DisciplineListAdapter adapter = new DisciplineListAdapter(listDiscipline, listener);
         viewHolder.recyclerView.setAdapter(adapter);
 
         viewHolder.recyclerView.setLayoutManager(new LinearLayoutManager(MyApp.getContext()));
@@ -115,10 +123,10 @@ public class AllDisciplineFragment extends Fragment {
 
     }
 
-    private void teste(){
+    private void teste() {
         List<Discipline> listDiscipline = new DisciplineBusiness().listDiscipline();
 
-        for (int i = 0;i < listDiscipline.size();i++){
+        for (int i = 0; i < listDiscipline.size(); i++) {
             Discipline d = new Discipline();
 
             d.setName(listDiscipline.get(i).getName());

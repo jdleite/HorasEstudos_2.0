@@ -3,6 +3,7 @@ package com.br.horasestudos.views.viewHolder;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.provider.Settings;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -16,14 +17,16 @@ import com.br.horasestudos.views.entity.Discipline;
 public class DisciplineViewHolder extends RecyclerView.ViewHolder {
 
     TextView disciplineName;
-    ImageView imgRemove;
+    ImageView imgRemove,imgPlus;
     Context context;
+    public static int point;
     public DisciplineViewHolder(@NonNull View itemView,Context contextHolder) {
         super(itemView);
 
 
         disciplineName = itemView.findViewById(R.id.txt_name);
         imgRemove  = itemView.findViewById(R.id.img_remove);
+        imgPlus = itemView.findViewById(R.id.img_plus);
         context = contextHolder;
     }
 
@@ -34,7 +37,9 @@ public class DisciplineViewHolder extends RecyclerView.ViewHolder {
             @Override
             public void onClick(View v) {
 
+                point = 0;
                 listener.onListClick(discipline.getId());
+
 
             }
         });
@@ -56,6 +61,19 @@ public class DisciplineViewHolder extends RecyclerView.ViewHolder {
                         })
                         .setNeutralButton(context.getString(R.string.nao),null)
                         .show();
+            }
+        });
+
+        imgPlus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                point = 1;
+                listener.onListClick(discipline.getId());
+
+
+
+
             }
         });
     }

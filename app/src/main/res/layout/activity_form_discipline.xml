@@ -9,11 +9,11 @@
     tools:context=".views.views.FormDisciplineActivity">
 
     <EditText
-        android:id="@+id/edtDiscipline"
-        android:hint="Informe a Matéria"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAlignment="center" />
+    android:id="@+id/edtDiscipline"
+    android:hint="Informe a Matéria"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:textAlignment="center" />
 
 
     <Button

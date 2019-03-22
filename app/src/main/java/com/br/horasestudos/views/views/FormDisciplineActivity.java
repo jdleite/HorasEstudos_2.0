@@ -88,7 +88,9 @@ public class FormDisciplineActivity extends AppCompatActivity implements View.On
                     Toast.makeText(getApplicationContext(),getString(R.string.erro_alterar), Toast.LENGTH_LONG).show();
                 }
             }
+
             finish();
+            disciplineId = 0;
 
 
 

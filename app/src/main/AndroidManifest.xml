@@ -10,7 +10,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".views.views.FormDisciplineActivity"></activity>
+        <activity android:name=".views.views.AddHoursActivity"></activity>
+        <activity android:name=".views.views.FormDisciplineActivity" />
         <activity
             android:name=".views.views.MainActivity"
             android:label="@string/app_name"
