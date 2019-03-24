@@ -26,4 +26,6 @@
     <string name="erro_salvar">Erro ao salvar</string>
     <string name="alterado_sucesso">Alterado com sucesso</string>
     <string name="erro_alterar">Erro ao alterar</string>
+    <string name="hora_t_rmino">Hora Término:</string>
+    <string name="hora_inicio">Hora Inicio:</string>
 </resources>
