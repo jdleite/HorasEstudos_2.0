@@ -17,7 +17,7 @@ import com.br.horasestudos.views.entity.Discipline;
 public class DisciplineViewHolder extends RecyclerView.ViewHolder {
 
     TextView disciplineName;
-    ImageView imgRemove,imgPlus;
+    ImageView imgRemove,imgPlus,imgPencil;
     Context context;
     public static int point;
     public DisciplineViewHolder(@NonNull View itemView,Context contextHolder) {
@@ -26,6 +26,7 @@ public class DisciplineViewHolder extends RecyclerView.ViewHolder {
 
         disciplineName = itemView.findViewById(R.id.txt_name);
         imgRemove  = itemView.findViewById(R.id.img_remove);
+        imgPencil = itemView.findViewById(R.id.img_pencil);
         imgPlus = itemView.findViewById(R.id.img_plus);
         context = contextHolder;
     }
@@ -33,14 +34,11 @@ public class DisciplineViewHolder extends RecyclerView.ViewHolder {
     public void bindData(final Discipline discipline, final DisciplineListener listener){
         disciplineName.setText(discipline.getName());
 
-        disciplineName.setOnClickListener(new View.OnClickListener() {
+        imgPencil.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 point = 0;
                 listener.onListClick(discipline.getId());
-
-
             }
         });
 

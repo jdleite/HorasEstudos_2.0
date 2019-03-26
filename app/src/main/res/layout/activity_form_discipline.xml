@@ -4,27 +4,30 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:gravity="center"
+    android:orientation="vertical"
     tools:context=".views.views.FormDisciplineActivity">
 
     <EditText
-    android:id="@+id/edtDiscipline"
-    android:hint="Informe a Matéria"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:textAlignment="center" />
+        android:id="@+id/edtDiscipline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Informe a Matéria"
+        android:inputType="text"
+        android:digits="abcdefghijklmnopqrstuvxwyz"
+        android:textAlignment="center" />
 
 
     <Button
         android:id="@+id/btnSave"
-        android:text="@string/salvar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="@string/salvar" />
+
     <Button
         android:id="@+id/btnCancel"
-        android:text="@string/cancelar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="@string/cancelar" />
 
 </LinearLayout>

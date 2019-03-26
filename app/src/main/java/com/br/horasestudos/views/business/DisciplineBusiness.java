@@ -29,4 +29,11 @@ public class DisciplineBusiness {
     public Discipline loadDiscipline(int id){
         return repository.loadDiscipline(id);
     }
+
+    public int sumHour(int begin,int finish){
+
+        return  begin - finish;
+
+
+    }
 }

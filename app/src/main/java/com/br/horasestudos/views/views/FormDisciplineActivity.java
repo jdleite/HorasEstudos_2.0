@@ -17,7 +17,6 @@ public class FormDisciplineActivity extends AppCompatActivity implements View.On
 
     private ViewHolder viewHolder = new ViewHolder();
     DisciplineBusiness business;
-    DisciplineRepository repository;
 
     private int disciplineId = 0;
 
@@ -26,7 +25,8 @@ public class FormDisciplineActivity extends AppCompatActivity implements View.On
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_form_discipline);
-        repository = new DisciplineRepository();
+
+        business = new DisciplineBusiness();
 
         viewHolder.edtDiscipline = findViewById(R.id.edtDiscipline);
         viewHolder.btnSave = findViewById(R.id.btnSave);
@@ -118,7 +118,7 @@ public class FormDisciplineActivity extends AppCompatActivity implements View.On
         Bundle b = getIntent().getExtras();
         if (b != null) {
             disciplineId = b.getInt(Constants.BundleConstants.BUNDLE_ID);
-            Discipline discipline = repository.loadDiscipline(disciplineId);
+            Discipline discipline = business.loadDiscipline(disciplineId);
             viewHolder.edtDiscipline.setText(discipline.getName());
         }
     }

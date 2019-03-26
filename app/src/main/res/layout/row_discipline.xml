@@ -10,19 +10,11 @@
         android:layout_width="0dp"
         android:padding="20dp"
         android:textSize="25dp"
+        android:maxLength="10"
         android:textColor="@color/primaryText"
         android:layout_height="wrap_content" />
 
-    <ImageView
-        android:id="@+id/img_remove"
-        android:layout_width="0dp"
-        android:layout_height="65dp"
-        android:layout_marginRight="20dp"
-        android:layout_gravity="right"
-        android:paddingTop="25dp"
-        android:paddingBottom="15dp"
-        android:src="@drawable/close"
-        android:layout_weight="1"/>
+
     <ImageView
         android:id="@+id/img_plus"
         android:layout_width="20dp"
@@ -32,6 +24,26 @@
         android:paddingTop="15dp"
         android:paddingBottom="15dp"
         android:src="@drawable/plus"
+        android:layout_weight="1"/>
+    <ImageView
+        android:id="@+id/img_pencil"
+        android:layout_width="20dp"
+        android:layout_height="75dp"
+        android:layout_marginRight="20dp"
+        android:layout_gravity="right"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:src="@drawable/p"
+        android:layout_weight="1"/>
+    <ImageView
+        android:id="@+id/img_remove"
+        android:layout_width="0dp"
+        android:layout_height="65dp"
+        android:layout_marginRight="20dp"
+        android:layout_gravity="right"
+        android:paddingTop="25dp"
+        android:paddingBottom="15dp"
+        android:src="@drawable/close"
         android:layout_weight="1"/>
 
 </LinearLayout>
