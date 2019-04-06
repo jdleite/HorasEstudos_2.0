@@ -12,7 +12,18 @@
         android:textSize="25dp"
         android:maxLength="10"
         android:textColor="@color/primaryText"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/all_hour"
+        android:text="name"
+        android:layout_weight="7"
+        android:layout_width="0dp"
+        android:textSize="25dp"
+        android:layout_gravity="center"
+        android:maxLength="10"
+        android:textColor="@color/primaryText"
+        android:layout_height="wrap_content"/>
 
 
     <ImageView

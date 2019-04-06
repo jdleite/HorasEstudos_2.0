@@ -6,7 +6,7 @@ public class Constants {
         public static String NAME = "NAME";
         public static String HOUR = "HOUR";
         public static String DATE = "DATE";
-        public static String ALL_HOUR = "ALL_HOUR";
+        public static String ALL_HOURS = "ALL_HOURS";
 
 
     }

@@ -8,7 +8,7 @@ public class CreateDatabase {
     public Boolean create(){
         try {
             SQLiteDatabase db = MainDb.getInstance().getWritableDatabase();
-            String column = "(ID INTEGER PRIMARY KEY AUTOINCREMENT,NAME VARCHAR,HOUR FLOAT,DATE VARCHAR,ALL_HOUR FLOAT)";
+            String column = "(ID INTEGER PRIMARY KEY AUTOINCREMENT,NAME VARCHAR,HOUR FLOAT,DATE VARCHAR,ALL_HOURS FLOAT)";
             String query = "CREATE TABLE IF NOT EXISTS " + MainDb.TABELA + column;
             db.execSQL(query);
             return true;

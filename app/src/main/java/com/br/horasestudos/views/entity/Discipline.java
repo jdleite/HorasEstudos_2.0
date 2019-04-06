@@ -5,18 +5,18 @@ public class Discipline {
     private String name;
     private float hour;
     private String date;
-    private float all_Hours;
+    private float all_hours;
 
     public Discipline(){
 
     }
 
-    public Discipline(int id, String name, float hour, String date, float all_Hours) {
+    public Discipline(int id, String name, float hour, String date, float all_hours) {
         this.id = id;
         this.name = name;
         this.hour = hour;
         this.date = date;
-        this.all_Hours = all_Hours;
+        this.all_hours = all_hours;
     }
 
     public int getId() {
@@ -51,11 +51,11 @@ public class Discipline {
         this.date = date;
     }
 
-    public float getAll_Hours() {
-        return all_Hours;
+    public float getAll_hours() {
+        return all_hours;
     }
 
-    public void setAll_Hours(float all_Hours) {
-        this.all_Hours = all_Hours;
+    public void setAll_hours(float all_hours) {
+        this.all_hours = all_hours;
     }
 }

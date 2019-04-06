@@ -16,7 +16,7 @@ import android.view.MenuItem;
 import android.view.View;
 
 import com.br.horasestudos.R;
-
+import com.br.horasestudos.views.banco.CreateDatabase;
 
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener,View.OnClickListener {
@@ -27,6 +27,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+         new CreateDatabase().create();
 
         viewHolder.floatingActionButton = findViewById(R.id.add_discipline);
 

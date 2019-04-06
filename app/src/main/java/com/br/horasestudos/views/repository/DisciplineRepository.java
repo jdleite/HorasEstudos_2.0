@@ -21,7 +21,7 @@ public class DisciplineRepository {
             cv.put(Constants.DesciplineConstants.NAME, discipline.getName());
             cv.put(Constants.DesciplineConstants.HOUR, discipline.getHour());
             cv.put(Constants.DesciplineConstants.DATE, discipline.getDate());
-            cv.put(Constants.DesciplineConstants.ALL_HOUR, discipline.getAll_Hours());
+            cv.put(Constants.DesciplineConstants.ALL_HOURS, discipline.getAll_hours());
 
             db.insert(MainDb.TABELA, null, cv);
             return true;
@@ -46,7 +46,7 @@ public class DisciplineRepository {
                     discipline.setName(c.getString(1));
                     discipline.setHour(c.getFloat(2));
                     discipline.setDate(c.getString(3));
-                    discipline.setAll_Hours(c.getFloat(4));
+                    discipline.setAll_hours(c.getFloat(4));
 
 
                     disciplines.add(discipline);
@@ -68,9 +68,9 @@ public class DisciplineRepository {
             ContentValues cv = new ContentValues();
 
             cv.put(Constants.DesciplineConstants.NAME, discipline.getName());
-            cv.put(Constants.DesciplineConstants.HOUR, discipline.getName());
-            cv.put(Constants.DesciplineConstants.DATE, discipline.getName());
-            cv.put(Constants.DesciplineConstants.ALL_HOUR, discipline.getName());
+            cv.put(Constants.DesciplineConstants.HOUR, discipline.getHour());
+            cv.put(Constants.DesciplineConstants.DATE, discipline.getDate());
+            cv.put(Constants.DesciplineConstants.ALL_HOURS, discipline.getAll_hours());
 
             String where = " ID = '" + discipline.getId() + "'";
 
@@ -114,7 +114,7 @@ public class DisciplineRepository {
                 discipline.setName(cursor.getString(1));
                 discipline.setHour(cursor.getFloat(2));
                 discipline.setDate(cursor.getString(3));
-                discipline.setAll_Hours(cursor.getFloat(4));
+                discipline.setAll_hours(cursor.getFloat(4));
             }
 
             if (cursor != null) {
@@ -128,6 +128,7 @@ public class DisciplineRepository {
         }
         return discipline;
     }
+
 
 
 }
