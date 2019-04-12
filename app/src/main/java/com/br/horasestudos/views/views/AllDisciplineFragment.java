@@ -47,7 +47,7 @@ public class AllDisciplineFragment extends Fragment {
 
         viewHolder.recyclerView = view.findViewById(R.id.recycler_all_discipline);
         viewHolder.txtName = view.findViewById(R.id.txt_name);
-        viewHolder.imgRemove = view.findViewById(R.id.img_remove);
+       // viewHolder.imgRemove = view.findViewById(R.id.img_remove);
 
 
         business = new DisciplineBusiness();
@@ -105,7 +105,6 @@ public class AllDisciplineFragment extends Fragment {
     private static class ViewHolder {
         RecyclerView recyclerView;
         TextView txtName;
-        ImageView imgRemove;
     }
 
     public void loadDiscipline() {

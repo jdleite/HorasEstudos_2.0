@@ -16,23 +16,27 @@ import com.br.horasestudos.views.entity.Discipline;
 
 public class DisciplineViewHolder extends RecyclerView.ViewHolder {
 
-    TextView disciplineName;
-    ImageView imgRemove,imgPlus,imgPencil;
+    TextView disciplineName, all_hours;
+    ImageView imgRemove, imgPlus, imgPencil;
     Context context;
     public static int point;
-    public DisciplineViewHolder(@NonNull View itemView,Context contextHolder) {
+
+    public DisciplineViewHolder(@NonNull View itemView, Context contextHolder) {
         super(itemView);
 
 
         disciplineName = itemView.findViewById(R.id.txt_name);
-        imgRemove  = itemView.findViewById(R.id.img_remove);
+
         imgPencil = itemView.findViewById(R.id.img_pencil);
+        imgRemove = itemView.findViewById(R.id.img_remove);
         imgPlus = itemView.findViewById(R.id.img_plus);
+        all_hours = itemView.findViewById(R.id.all_hour);
         context = contextHolder;
     }
 
-    public void bindData(final Discipline discipline, final DisciplineListener listener){
+    public void bindData(final Discipline discipline, final DisciplineListener listener) {
         disciplineName.setText(discipline.getName());
+        all_hours.setText(String.valueOf(discipline.getAll_hours()));
 
         imgPencil.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,7 +61,7 @@ public class DisciplineViewHolder extends RecyclerView.ViewHolder {
 
                             }
                         })
-                        .setNeutralButton(context.getString(R.string.nao),null)
+                        .setNeutralButton(context.getString(R.string.nao), null)
                         .show();
             }
         });
@@ -68,8 +72,6 @@ public class DisciplineViewHolder extends RecyclerView.ViewHolder {
 
                 point = 1;
                 listener.onListClick(discipline.getId());
-
-
 
 
             }

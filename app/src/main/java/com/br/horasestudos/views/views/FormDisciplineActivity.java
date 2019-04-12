@@ -89,8 +89,9 @@ public class FormDisciplineActivity extends AppCompatActivity implements View.On
                 }
             }
 
-            finish();
+
             disciplineId = 0;
+            finish();
 
 
 
