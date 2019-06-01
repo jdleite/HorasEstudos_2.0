@@ -93,10 +93,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         Class fragmenClass = null;
         int id = item.getItemId();
 
-        if (id == R.id.todas_datas) {
-            fragmenClass = AllDatesFragment.class;
 
-        } else if (id == R.id.todas_horas) {
+
+        if (id == R.id.todas_horas) {
 
             fragmenClass = AllHoursFragment.class;
 

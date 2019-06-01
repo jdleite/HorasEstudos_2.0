@@ -68,8 +68,6 @@ public class DisciplineRepository {
             ContentValues cv = new ContentValues();
 
             cv.put(Constants.DesciplineConstants.NAME, discipline.getName());
-            cv.put(Constants.DesciplineConstants.HOUR, discipline.getHour());
-            cv.put(Constants.DesciplineConstants.DATE, discipline.getDate());
 
             String where = " ID = '" + discipline.getId() + "'";
 

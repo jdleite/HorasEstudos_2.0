@@ -1,6 +1,7 @@
 package com.br.horasestudos.views.views;
 
 import android.app.TimePickerDialog;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -14,14 +15,17 @@ import com.br.horasestudos.views.business.DisciplineBusiness;
 import com.br.horasestudos.views.constants.Constants;
 import com.br.horasestudos.views.entity.Discipline;
 
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 public class AddHoursActivity extends AppCompatActivity implements View.OnClickListener {
 
     private ViewHolder viewHolder = new ViewHolder();
     private DisciplineBusiness business;
-
+    private SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+    private Date date = new Date();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +49,8 @@ public class AddHoursActivity extends AppCompatActivity implements View.OnClickL
     public void onClick(View v) {
         if (v.getId() == R.id.btn_add_save) {
             sumHour();
+
+            startActivity(new Intent(getApplicationContext(),MainActivity.class));
 
         } else if (v.getId() == R.id.btn_add_cancel) {
             finish();
@@ -84,7 +90,7 @@ public class AddHoursActivity extends AppCompatActivity implements View.OnClickL
 
         float num1 = Float.parseFloat(a);
         float num2 = Float.parseFloat(b);
-        float res = 0;
+        float res;
 
 
         if (num1 > num2) {
@@ -94,9 +100,13 @@ public class AddHoursActivity extends AppCompatActivity implements View.OnClickL
         }
 
 
-        business.insertHour(disciplineId, res);
+        String data = dateFormat.format(date);
 
-        Toast.makeText(getApplicationContext(),"Foi adicionado " + res + " Hora(s)",Toast.LENGTH_SHORT).show();
+
+
+        business.insertHour(disciplineId, data,res);
+
+        Toast.makeText(getApplicationContext(),"Foi adicionado " + res + " Hora(s) "  + data,Toast.LENGTH_SHORT).show();
 
 
     }

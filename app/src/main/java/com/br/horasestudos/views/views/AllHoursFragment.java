@@ -25,7 +25,6 @@ public class AllHoursFragment extends Fragment {
 
     ViewHolder viewHolder = new ViewHolder();
     DisciplineBusiness business;
-    DisciplineListener listener;
 
 
     @Override

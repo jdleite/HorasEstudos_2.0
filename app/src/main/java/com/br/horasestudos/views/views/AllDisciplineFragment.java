@@ -129,7 +129,9 @@ public class AllDisciplineFragment extends Fragment {
             Discipline d = new Discipline();
 
             d.setName(listDiscipline.get(i).getName());
+            d.setDate(listDiscipline.get(i).getDate());
             System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++" + d.getName());
+            System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++" + d.getDate());
         }
     }
 
