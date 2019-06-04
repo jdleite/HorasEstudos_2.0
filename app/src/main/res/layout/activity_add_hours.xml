@@ -16,38 +16,24 @@
 
     <EditText
         android:id="@+id/star_hour"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
         android:gravity="center"
         android:hint="12:45"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/hora_t_rmino"
-        android:textAlignment="center" />
-
-    <EditText
-        android:id="@+id/finish_hour"
-        android:layout_width="100dp"
-        android:hint="14:45"
-        android:gravity="center"
-        android:layout_height="wrap_content" />
-
-
-
+        android:maxLength="5" />
 
 
     <Button
         android:id="@+id/btn_add_save"
-        android:text="@string/salvar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="@string/salvar" />
+
     <Button
         android:id="@+id/btn_add_cancel"
-        android:text="@string/cancelar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="@string/cancelar" />
 
 
 </LinearLayout>

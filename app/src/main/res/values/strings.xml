@@ -28,4 +28,7 @@
     <string name="erro_alterar">Erro ao alterar</string>
     <string name="hora_t_rmino">Hora Término:</string>
     <string name="hora_inicio">Hora Inicio:</string>
+    <string name="adicionado_sucesso">Adicionado com Sucesso</string>
+    <string name="campo_vazio">Campo Vazio</string>
+    <string name="erro_inserir">Erro ao Inserir</string>
 </resources>

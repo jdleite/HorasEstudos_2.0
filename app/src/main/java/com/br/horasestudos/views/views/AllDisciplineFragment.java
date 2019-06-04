@@ -47,7 +47,6 @@ public class AllDisciplineFragment extends Fragment {
 
         viewHolder.recyclerView = view.findViewById(R.id.recycler_all_discipline);
         viewHolder.txtName = view.findViewById(R.id.txt_name);
-       // viewHolder.imgRemove = view.findViewById(R.id.img_remove);
 
 
         business = new DisciplineBusiness();
@@ -90,14 +89,12 @@ public class AllDisciplineFragment extends Fragment {
 
             }
 
-            
+
         };
 
 
         loadDiscipline();
 
-
-        teste();
 
         return view;
     }
@@ -122,18 +119,6 @@ public class AllDisciplineFragment extends Fragment {
 
     }
 
-    private void teste() {
-        List<Discipline> listDiscipline = new DisciplineBusiness().listDiscipline();
-
-        for (int i = 0; i < listDiscipline.size(); i++) {
-            Discipline d = new Discipline();
-
-            d.setName(listDiscipline.get(i).getName());
-            d.setDate(listDiscipline.get(i).getDate());
-            System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++" + d.getName());
-            System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++" + d.getDate());
-        }
-    }
 
     @Override
     public void onResume() {

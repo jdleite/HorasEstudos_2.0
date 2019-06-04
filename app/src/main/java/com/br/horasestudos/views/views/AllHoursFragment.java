@@ -40,8 +40,6 @@ public class AllHoursFragment extends Fragment {
         business = new DisciplineBusiness();
 
         viewHolder.recyclerView = view.findViewById(R.id.recycler_all_hour);
-
-
         viewHolder.recyclerView.setLayoutManager(new LinearLayoutManager(MyApp.getContext()));
 
         onResume();

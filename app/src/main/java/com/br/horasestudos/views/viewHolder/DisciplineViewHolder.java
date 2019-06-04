@@ -13,6 +13,8 @@ import android.widget.TextView;
 import com.br.horasestudos.R;
 import com.br.horasestudos.views.listener.DisciplineListener;
 import com.br.horasestudos.views.entity.Discipline;
+import com.github.rtoshiro.util.format.SimpleMaskFormatter;
+import com.github.rtoshiro.util.format.text.MaskTextWatcher;
 
 public class DisciplineViewHolder extends RecyclerView.ViewHolder {
 
@@ -32,6 +34,10 @@ public class DisciplineViewHolder extends RecyclerView.ViewHolder {
         imgPlus = itemView.findViewById(R.id.img_plus);
         all_hours = itemView.findViewById(R.id.all_hour);
         context = contextHolder;
+
+        SimpleMaskFormatter smf = new SimpleMaskFormatter("NN:NN");
+        MaskTextWatcher mtw = new MaskTextWatcher(all_hours,smf);
+        all_hours.addTextChangedListener(mtw);
     }
 
     public void bindData(final Discipline discipline, final DisciplineListener listener) {
