@@ -5,13 +5,23 @@ public class Discipline {
     private String name;
     private float hour;
     private String date;
-    private float all_hours;
+    private long all_hours;
+
+
+
+    public long changeToHour(){
+        return getAll_hours() / 60;
+    }
+
+    public long changeToMinute(){
+        return getAll_hours() % 60;
+    }
 
     public Discipline(){
 
     }
 
-    public Discipline(int id, String name, float hour, String date, float all_hours) {
+    public Discipline(int id, String name, float hour, String date, long all_hours) {
         this.id = id;
         this.name = name;
         this.hour = hour;
@@ -51,11 +61,11 @@ public class Discipline {
         this.date = date;
     }
 
-    public float getAll_hours() {
+    public long getAll_hours() {
         return all_hours;
     }
 
-    public void setAll_hours(float all_hours) {
+    public void setAll_hours(long all_hours) {
         this.all_hours = all_hours;
     }
 }

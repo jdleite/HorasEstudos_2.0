@@ -46,7 +46,7 @@ public class DisciplineRepository {
                     discipline.setName(c.getString(1));
                     discipline.setHour(c.getFloat(2));
                     discipline.setDate(c.getString(3));
-                    discipline.setAll_hours(c.getFloat(4));
+                    discipline.setAll_hours(c.getLong(4));
 
 
                     disciplines.add(discipline);
@@ -111,7 +111,7 @@ public class DisciplineRepository {
                 discipline.setName(cursor.getString(1));
                 discipline.setHour(cursor.getFloat(2));
                 discipline.setDate(cursor.getString(3));
-                discipline.setAll_hours(cursor.getFloat(4));
+                discipline.setAll_hours(cursor.getLong(4));
             }
 
             if (cursor != null) {

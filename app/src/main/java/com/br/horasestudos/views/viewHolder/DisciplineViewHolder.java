@@ -18,7 +18,7 @@ import com.github.rtoshiro.util.format.text.MaskTextWatcher;
 
 public class DisciplineViewHolder extends RecyclerView.ViewHolder {
 
-    TextView disciplineName, all_hours;
+    TextView disciplineName, all_hours,all_minute;
     ImageView imgRemove, imgPlus, imgPencil;
     Context context;
     public static int point;
@@ -33,6 +33,7 @@ public class DisciplineViewHolder extends RecyclerView.ViewHolder {
         imgRemove = itemView.findViewById(R.id.img_remove);
         imgPlus = itemView.findViewById(R.id.img_plus);
         all_hours = itemView.findViewById(R.id.all_hour);
+        all_minute = itemView.findViewById(R.id.all_minute);
         context = contextHolder;
 
         SimpleMaskFormatter smf = new SimpleMaskFormatter("NN:NN");
@@ -42,7 +43,8 @@ public class DisciplineViewHolder extends RecyclerView.ViewHolder {
 
     public void bindData(final Discipline discipline, final DisciplineListener listener) {
         disciplineName.setText(discipline.getName());
-        all_hours.setText(String.valueOf(discipline.getAll_hours()));
+        all_hours.setText(String.valueOf(discipline.changeToHour()));
+        all_minute.setText(String.valueOf(discipline.changeToMinute()));
 
         imgPencil.setOnClickListener(new View.OnClickListener() {
             @Override

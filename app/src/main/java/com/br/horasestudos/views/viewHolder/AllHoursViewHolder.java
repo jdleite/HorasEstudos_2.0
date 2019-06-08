@@ -22,6 +22,6 @@ public class AllHoursViewHolder extends RecyclerView.ViewHolder {
 
     public void bindData(Discipline discipline) {
         txtName.setText(discipline.getName());
-        txtHours.setText(String.valueOf(discipline.getAll_hours()));
+        txtHours.setText(String.valueOf(discipline.changeToHour()));
     }
 }

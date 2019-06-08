@@ -34,7 +34,7 @@ public class DisciplineBusiness {
         return repository.loadDiscipline(id);
     }
 
-    public Boolean insertHour(int id, String data, float total) {
+    public Boolean insertHour(int id, String data, long total) {
         try {
             SQLiteDatabase db = MainDb.getInstance().getWritableDatabase();
             String query = ("UPDATE Discipline SET date = '" + data + "', all_hours = all_hours + '" + total + "' WHERE ID = '" + id + "'");

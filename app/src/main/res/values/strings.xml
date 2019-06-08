@@ -31,4 +31,5 @@
     <string name="adicionado_sucesso">Adicionado com Sucesso</string>
     <string name="campo_vazio">Campo Vazio</string>
     <string name="erro_inserir">Erro ao Inserir</string>
+    <string name="horas_iguais">Horas Iguais</string>
 </resources>

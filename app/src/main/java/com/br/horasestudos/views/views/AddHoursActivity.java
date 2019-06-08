@@ -1,7 +1,10 @@
 package com.br.horasestudos.views.views;
 
+import android.annotation.TargetApi;
 import android.app.TimePickerDialog;
 import android.content.Intent;
+import android.os.Build;
+import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -20,16 +23,18 @@ import com.github.rtoshiro.util.format.text.MaskTextWatcher;
 
 import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
+import java.time.LocalTime;
+import java.time.temporal.ChronoUnit;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.GregorianCalendar;
 import java.util.List;
 
 public class AddHoursActivity extends AppCompatActivity implements View.OnClickListener {
 
     private ViewHolder viewHolder = new ViewHolder();
     private DisciplineBusiness business;
-    private SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
-    private Date date = new Date();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,11 +46,14 @@ public class AddHoursActivity extends AppCompatActivity implements View.OnClickL
         viewHolder.btnSalvar = findViewById(R.id.btn_add_save);
         viewHolder.btnCancelar = findViewById(R.id.btn_add_cancel);
         viewHolder.edtStart = findViewById(R.id.star_hour);
+        viewHolder.edtFish = findViewById(R.id.finish_hour);
 
         SimpleMaskFormatter smf = new SimpleMaskFormatter("NN:NN");
         MaskTextWatcher mtw = new MaskTextWatcher(viewHolder.edtStart, smf);
-        viewHolder.edtStart.addTextChangedListener(mtw);
+        MaskTextWatcher mty = new MaskTextWatcher(viewHolder.edtFish, smf);
 
+        viewHolder.edtStart.addTextChangedListener(mtw);
+        viewHolder.edtFish.addTextChangedListener(mty);
 
 
         listener();
@@ -58,6 +66,7 @@ public class AddHoursActivity extends AppCompatActivity implements View.OnClickL
             sumHour();
 
 
+
         } else if (v.getId() == R.id.btn_add_cancel) {
             finish();
 
@@ -66,7 +75,7 @@ public class AddHoursActivity extends AppCompatActivity implements View.OnClickL
 
     private static class ViewHolder {
         Button btnSalvar, btnCancelar;
-        EditText edtStart;
+        EditText edtStart, edtFish;
     }
 
     private void listener() {
@@ -75,17 +84,62 @@ public class AddHoursActivity extends AppCompatActivity implements View.OnClickL
         viewHolder.edtStart.setOnClickListener(this);
     }
 
+
+    @TargetApi(Build.VERSION_CODES.O)
     private void sumHour() {
 
+        if (!validar()) {
+            return;
+        } else {
+            Bundle bundle = getIntent().getExtras();
 
+            int disciplineId = bundle.getInt(Constants.BundleConstants.BUNDLE_ID);
+
+            Calendar c = Calendar.getInstance();
+
+            SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+
+
+            c.getTime();
+
+
+            String horario1 = viewHolder.edtStart.getText().toString();
+            String horario2 = viewHolder.edtFish.getText().toString();
+            LocalTime lt1 = LocalTime.parse(horario1);
+            LocalTime lt2 = LocalTime.parse(horario2);
+
+
+
+
+
+            long emMinutos = lt1.until(lt2, ChronoUnit.MINUTES);
+
+            if (lt1.equals(lt2)){
+                Toast.makeText(getApplicationContext(),getString(R.string.horas_iguais),Toast.LENGTH_SHORT).show();
+
+            }else{
+                business.insertHour(disciplineId, sdf.format(c.getTime()), emMinutos);
+
+                startActivity(new Intent(AddHoursActivity.this, MainActivity.class));
+            }
+
+
+
+
+
+
+
+        }
 
     }
-
 
 
     private boolean validar() {
         if (viewHolder.edtStart.getText().toString().trim().isEmpty()) {
             viewHolder.edtStart.setError(getString(R.string.campo_vazio));
+            return false;
+        } else if (viewHolder.edtFish.getText().toString().trim().isEmpty()) {
+            viewHolder.edtFish.setError(getString(R.string.campo_vazio));
             return false;
         }
 
