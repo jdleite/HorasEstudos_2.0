@@ -6,28 +6,46 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
+    android:background="@color/colorPrimary"
     tools:context=".views.views.FormDisciplineActivity">
+
+
+    <ImageView
+        android:layout_width="317dp"
+        android:layout_height="238dp"
+        android:background="@drawable/img_livro"/>
 
     <EditText
         android:id="@+id/edtDiscipline"
-        android:layout_width="match_parent"
+        android:layout_width="319dp"
         android:layout_height="wrap_content"
         android:hint="Informe a Matéria"
         android:inputType="text"
+        android:theme="@style/MyEditTextTheme"
+        android:textColor="@color/edtColor"
         android:digits="abcdefghijklmnopqrstuvxwyz"
-        android:textAlignment="center" />
+        android:textAlignment="center"
+    />
+
+
 
 
     <Button
         android:id="@+id/btnSave"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/salvar" />
+        android:layout_width="250dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="70dp"
+        android:background="@drawable/btn_salvar"
+        />
 
     <Button
         android:id="@+id/btnCancel"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/cancelar" />
+        android:layout_width="250dp"
+        android:layout_height="80dp"
+        android:background="@drawable/btn_cancelar" />
+
+
+
+
 
 </LinearLayout>

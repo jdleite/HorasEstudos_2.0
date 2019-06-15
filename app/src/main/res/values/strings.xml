@@ -32,4 +32,5 @@
     <string name="campo_vazio">Campo Vazio</string>
     <string name="erro_inserir">Erro ao Inserir</string>
     <string name="horas_iguais">Horas Iguais</string>
+    <string name="hora_negativa">Hora não pode ser negativa</string>
 </resources>

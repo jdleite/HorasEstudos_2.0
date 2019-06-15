@@ -66,7 +66,6 @@ public class AddHoursActivity extends AppCompatActivity implements View.OnClickL
             sumHour();
 
 
-
         } else if (v.getId() == R.id.btn_add_cancel) {
             finish();
 
@@ -109,24 +108,26 @@ public class AddHoursActivity extends AppCompatActivity implements View.OnClickL
             LocalTime lt2 = LocalTime.parse(horario2);
 
 
-
-
-
             long emMinutos = lt1.until(lt2, ChronoUnit.MINUTES);
 
-            if (lt1.equals(lt2)){
-                Toast.makeText(getApplicationContext(),getString(R.string.horas_iguais),Toast.LENGTH_SHORT).show();
+            if (lt1.equals(lt2)) {
+                Toast.makeText(getApplicationContext(), getString(R.string.horas_iguais), Toast.LENGTH_SHORT).show();
 
-            }else{
+            } else if (emMinutos < 0) {
+                Toast.makeText(getApplicationContext(),getString(R.string.hora_negativa), Toast.LENGTH_SHORT).show();
+
+
+            } else {
+
+
                 business.insertHour(disciplineId, sdf.format(c.getTime()), emMinutos);
 
+                Toast.makeText(getApplicationContext(),getString(R.string.adicionado_sucesso), Toast.LENGTH_SHORT).show();
+
+
                 startActivity(new Intent(AddHoursActivity.this, MainActivity.class));
+
             }
-
-
-
-
-
 
 
         }

@@ -66,11 +66,11 @@ public class FormDisciplineActivity extends AppCompatActivity implements View.On
 
             if (disciplineId == 0) {
 
-                if (business.saveDiscipline(discipline)){
+                if (business.saveDiscipline(discipline)) {
 
                     Toast.makeText(getApplicationContext(), getString(R.string.salvo_sucesso), Toast.LENGTH_LONG).show();
 
-                }else {
+                } else {
 
                     Toast.makeText(getApplicationContext(), getString(R.string.erro_salvar), Toast.LENGTH_LONG).show();
 
@@ -80,20 +80,18 @@ public class FormDisciplineActivity extends AppCompatActivity implements View.On
             } else {
 
                 discipline.setId(disciplineId);
-                if (business.updateDiscipline(discipline)){
+                if (business.updateDiscipline(discipline)) {
 
-                    Toast.makeText(getApplicationContext(),getString(R.string.alterado_sucesso), Toast.LENGTH_LONG).show();
-                }else{
+                    Toast.makeText(getApplicationContext(), getString(R.string.alterado_sucesso), Toast.LENGTH_LONG).show();
+                } else {
 
-                    Toast.makeText(getApplicationContext(),getString(R.string.erro_alterar), Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), getString(R.string.erro_alterar), Toast.LENGTH_LONG).show();
                 }
             }
 
 
             disciplineId = 0;
             finish();
-
-
 
 
         }

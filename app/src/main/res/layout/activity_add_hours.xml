@@ -6,7 +6,15 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
+    android:background="@color/colorPrimary"
     tools:context=".views.views.AddHoursActivity">
+
+
+    <ImageView
+        android:layout_width="228dp"
+        android:layout_height="178dp"
+        android:background="@drawable/relogio"
+        />
 
     <TextView
         android:layout_width="match_parent"
@@ -16,15 +24,19 @@
 
     <EditText
         android:id="@+id/star_hour"
-        android:layout_width="100dp"
+        android:layout_width="153dp"
         android:layout_height="wrap_content"
         android:gravity="center"
+        android:theme="@style/MyEditTextTheme"
         android:hint="12:45"
+        android:ems="10"
+        android:inputType="number"
         android:maxLength="5" />
 
     <EditText
         android:id="@+id/finish_hour"
-        android:layout_width="100dp"
+        android:layout_width="153dp"
+        android:theme="@style/MyEditTextTheme"
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="14:38"
@@ -34,15 +46,16 @@
 
     <Button
         android:id="@+id/btn_add_save"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/salvar" />
+        android:layout_width="250dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/btn_salvar"/>
 
     <Button
         android:id="@+id/btn_add_cancel"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/cancelar" />
+        android:layout_width="250dp"
+        android:layout_height="80dp"
+        android:background="@drawable/btn_cancelar" />
 
 
 </LinearLayout>
