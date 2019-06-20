@@ -33,4 +33,6 @@
     <string name="erro_inserir">Erro ao Inserir</string>
     <string name="horas_iguais">Horas Iguais</string>
     <string name="hora_negativa">Hora não pode ser negativa</string>
+    <string name="hora_completa">Hora Deve Ser Completa</string>
+    <string name="hora_maior">Hora maior que 23:59</string>
 </resources>

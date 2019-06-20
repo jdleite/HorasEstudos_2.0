@@ -110,40 +110,56 @@ public class AddHoursActivity extends AppCompatActivity implements View.OnClickL
 
             long emMinutos = lt1.until(lt2, ChronoUnit.MINUTES);
 
+
             if (lt1.equals(lt2)) {
                 Toast.makeText(getApplicationContext(), getString(R.string.horas_iguais), Toast.LENGTH_SHORT).show();
 
             } else if (emMinutos < 0) {
-                Toast.makeText(getApplicationContext(),getString(R.string.hora_negativa), Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), getString(R.string.hora_negativa), Toast.LENGTH_SHORT).show();
 
 
             } else {
 
 
-                business.insertHour(disciplineId, sdf.format(c.getTime()), emMinutos);
+            business.insertHour(disciplineId, sdf.format(c.getTime()), emMinutos);
 
-                Toast.makeText(getApplicationContext(),getString(R.string.adicionado_sucesso), Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), getString(R.string.adicionado_sucesso), Toast.LENGTH_SHORT).show();
 
 
-                startActivity(new Intent(AddHoursActivity.this, MainActivity.class));
-
-            }
-
+            startActivity(new Intent(AddHoursActivity.this, MainActivity.class));
 
         }
 
+
     }
+
+}
 
 
     private boolean validar() {
+
         if (viewHolder.edtStart.getText().toString().trim().isEmpty()) {
             viewHolder.edtStart.setError(getString(R.string.campo_vazio));
             return false;
         } else if (viewHolder.edtFish.getText().toString().trim().isEmpty()) {
             viewHolder.edtFish.setError(getString(R.string.campo_vazio));
             return false;
+        } else if (viewHolder.edtStart.getText().toString().length() < 5) {
+            clearHour();
+            viewHolder.edtStart.setError(getString(R.string.hora_completa));
+            return false;
+        } else if (viewHolder.edtFish.getText().toString().length() < 5) {
+            clearHour();
+            viewHolder.edtFish.setError(getString(R.string.hora_completa));
         }
 
+
         return true;
+    }
+
+    private void clearHour() {
+        viewHolder.edtStart.setText("");
+        viewHolder.edtFish.setText("");
+
     }
 }

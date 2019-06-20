@@ -62,7 +62,7 @@ public class FormDisciplineActivity extends AppCompatActivity implements View.On
             Discipline discipline = new Discipline();
             business = new DisciplineBusiness();
 
-            discipline.setName(viewHolder.edtDiscipline.getText().toString());
+            discipline.setName(viewHolder.edtDiscipline.getText().toString().toUpperCase());
 
             if (disciplineId == 0) {
 

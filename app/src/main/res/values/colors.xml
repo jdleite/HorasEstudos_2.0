@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#77A6F7</color>
-    <color name="colorPrimaryDark">#003CE7</color>
+    <color name="colorPrimaryDark">#4A6FDA</color>
     <color name="colorAccent">#000000</color>
     <color name="primaryText">#DD000000</color>
     <color name="edtColor">#FF0000</color>
+    <color name="txtColor">#2FE43A</color>
+    <color name="btnFloActButn">#FFFFFF</color>
 </resources>

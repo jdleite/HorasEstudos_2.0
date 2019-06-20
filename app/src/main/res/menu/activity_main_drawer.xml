@@ -7,12 +7,14 @@
 
         <item
             android:id="@+id/todas_horas"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@drawable/books"
             android:title="@string/todas" />
         <item
             android:id="@+id/todas_materia"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/notebook"
             android:title="@string/materias" />
+
+
 
     </group>
 
