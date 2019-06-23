@@ -52,6 +52,7 @@ public class AllDisciplineFragment extends Fragment {
         business = new DisciplineBusiness();
 
         listener = new DisciplineListener() {
+            //Pega o id da posição clicada
             @Override
             public void onListClick(int id) {
 
@@ -81,6 +82,7 @@ public class AllDisciplineFragment extends Fragment {
 
             }
 
+            //deleta a disciplina passando o id
             @Override
             public void onDeleteClick(int id) {
 
@@ -104,6 +106,7 @@ public class AllDisciplineFragment extends Fragment {
         TextView txtName;
     }
 
+    //Lista a disciplina
     public void loadDiscipline() {
         List<Discipline> listDiscipline = new ArrayList<>();
         DisciplineBusiness business = new DisciplineBusiness();

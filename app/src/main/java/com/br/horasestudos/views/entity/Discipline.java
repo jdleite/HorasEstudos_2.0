@@ -9,10 +9,11 @@ public class Discipline {
 
 
 
+    //metodo que transforma os numeros do banco em horas
     public long changeToHour(){
         return getAll_hours() / 60;
     }
-
+    //metodo que transforma os numeros do banco em minutos
     public long changeToMinute(){
         return getAll_hours() % 60;
     }

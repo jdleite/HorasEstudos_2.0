@@ -1,6 +1,7 @@
 package com.br.horasestudos.views.constants;
 
 public class Constants {
+    //constantes da disciplina
     public static class DesciplineConstants {
         public static String ID = "ID";
         public static String NAME = "NAME";
@@ -10,7 +11,7 @@ public class Constants {
 
 
     }
-
+    //essa constante passa o id para a tela de alterar materia
     public static class BundleConstants{
         public static String BUNDLE_ID = "ID";
     }

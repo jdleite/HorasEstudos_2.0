@@ -5,6 +5,7 @@ import android.widget.Toast;
 
 public class CreateDatabase {
 
+    //cria o banco
     public Boolean create(){
         try {
             SQLiteDatabase db = MainDb.getInstance().getWritableDatabase();
@@ -19,6 +20,7 @@ public class CreateDatabase {
         return false;
     }
 
+    //deleta o banco
     public Boolean deleteDatabase(){
         try {
             SQLiteDatabase db = MainDb.getInstance().getWritableDatabase();

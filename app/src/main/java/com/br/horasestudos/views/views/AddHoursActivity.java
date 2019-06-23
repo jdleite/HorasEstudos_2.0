@@ -60,6 +60,7 @@ public class AddHoursActivity extends AppCompatActivity implements View.OnClickL
 
     }
 
+
     @Override
     public void onClick(View v) {
         if (v.getId() == R.id.btn_add_save) {
@@ -83,7 +84,7 @@ public class AddHoursActivity extends AppCompatActivity implements View.OnClickL
         viewHolder.edtStart.setOnClickListener(this);
     }
 
-
+    //valida a hora e adiciona no banco
     @TargetApi(Build.VERSION_CODES.O)
     private void sumHour() {
 
@@ -135,7 +136,7 @@ public class AddHoursActivity extends AppCompatActivity implements View.OnClickL
 
 }
 
-
+    //metodo que valida se os campos estão preenchidos corretamente
     private boolean validar() {
 
         if (viewHolder.edtStart.getText().toString().trim().isEmpty()) {
@@ -156,7 +157,7 @@ public class AddHoursActivity extends AppCompatActivity implements View.OnClickL
 
         return true;
     }
-
+    //limpa os campos
     private void clearHour() {
         viewHolder.edtStart.setText("");
         viewHolder.edtFish.setText("");
